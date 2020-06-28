@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
+const { wrongArticleURL, wrongImageURL } = require('../errors/errorMessages');
 
 const articlesSchema = new mongoose.Schema({
   keyword: {
@@ -29,7 +30,7 @@ const articlesSchema = new mongoose.Schema({
       validator(articleLink) {
         return validator.isURL(articleLink, { protocols: ['http', 'https'], require_protocol: true });
       },
-      message: (props) => `URL-адрес статьи: ${props.value} некорректен`,
+      message: () => wrongArticleURL,
     },
   },
   image: {
@@ -39,7 +40,7 @@ const articlesSchema = new mongoose.Schema({
       validator(articleImageLink) {
         return validator.isURL(articleImageLink, { protocols: ['http', 'https'], require_protocol: true });
       },
-      message: (props) => `URL-адрес иллюстрации статьи: ${props.value} некорректен`,
+      message: () => wrongImageURL,
     },
   },
   owner: {

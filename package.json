@@ -4,7 +4,7 @@
   "description": "API for the NewsExplorer project",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js NODE_ENV===production",
+    "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "jest"
   },
