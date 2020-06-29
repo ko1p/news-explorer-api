@@ -14,6 +14,10 @@ const noTitleArticle = 'Не указан заголовок статьи';
 const noTextArticle = 'Не указан текст статьи';
 const noDateArticle = 'Не указана дата статьи';
 const noSourceArticle = 'Не указан источник статьи';
+const noPassword = 'Необходимо указать пароль';
+const noEmail = 'Необходимо указать верный email адрес';
+const noName = 'Имя обязательное поле от 2 до 30 символов';
+const notFoundURL = 'Запрашиваемый ресурс не найден';
 
 module.exports = {
   thereIsNoArticle,
@@ -32,4 +36,8 @@ module.exports = {
   noTextArticle,
   noDateArticle,
   noSourceArticle,
+  notFoundURL,
+  noPassword,
+  noEmail,
+  noName,
 };
